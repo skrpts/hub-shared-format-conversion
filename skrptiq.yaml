@@ -3,7 +3,7 @@ id: "6fbc6b50-b4c9-465f-b208-1fc453df76b9"
 name: "format-conversion"
 display_name: "Format Conversion"
 description: "Converts content between output formats: markdown, plain text, email HTML, JSON, CSV, presentation outline"
-version: "1.0.2"
+version: "1.0.3"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
@@ -25,3 +25,17 @@ contents:
   documents: 0
   assets: 0
   total: 1
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-16T14:47:40.218Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: []
+    permissions: []
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/format-conversion/security"

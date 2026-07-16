@@ -9,7 +9,7 @@ tags: [Production, Quality]
 
 ## Capability
 
-Converts structured or unstructured content into a specified output format. Handles the formatting, structure, and conventions of the target format while preserving the source content's meaning and organisation.
+Converts structured or unstructured content into a specified output format. Handles the formatting, structure, and conventions of the target format while preserving the source content's meaning and organization.
 
 This replaces per-workflow formatting nodes (markdown-formatting, format-documentation, etc.) with a single shared skill that adapts to the requested output format.
 
@@ -28,7 +28,7 @@ This replaces per-workflow formatting nodes (markdown-formatting, format-documen
 
 - As the final stage of any pipeline that produces formatted output
 - When the same content needs to be delivered in multiple formats
-- To standardise output formatting across different workflows
+- To standardize output formatting across different workflows
 
 ## Inputs
 
