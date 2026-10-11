@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.0.4
+GH#1011 — add the prompt this skill never had. 14 published steps across 8 packages declared the non-existent `local.transform` step type, which needs no prompt; the engine had no handler, so they fell through to the LLM default with nothing to send and the author saw the model complaining about a prompt nobody wrote. This skill now ships the prompt its consumers bind to.
+
+`target_format` is a step-level `context` binding, not a value baked into the prompt: the skill supports six formats, so a hard-coded one would serve one consumer and force a fork for the next. The format is data about the use, not prose about the capability.
+
+Not mapped to the `format-convert` builtin — it converts JSON pretty/min and HTML to text, and cannot produce a presentation outline from prose.
+
 ## v1.0.3
 GH#845 — republish with American English (en-US) content, completing the source-only GH#805 flip that never reached the Hub. Copy only — no functional or behaviour change.
 
