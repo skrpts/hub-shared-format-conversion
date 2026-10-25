@@ -8,7 +8,7 @@ context_params:
   source_content:
     label: "Source content"
     description: "The content to convert. Any format."
-    default_from_previous: true
+    required: true
   target_format:
     label: "Target format"
     description: "One of: markdown, plain text, email HTML, JSON, CSV, presentation outline. Declared per step — this skill supports all six, so the format belongs to the use, not to the prompt."

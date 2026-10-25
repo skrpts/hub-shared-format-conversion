@@ -3,7 +3,7 @@ id: "6fbc6b50-b4c9-465f-b208-1fc453df76b9"
 name: "format-conversion"
 display_name: "Format Conversion"
 description: "Converts content between output formats: markdown, plain text, email HTML, JSON, CSV, presentation outline"
-version: "1.0.4"
+version: "1.0.5"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
@@ -28,7 +28,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-10-11T17:38:54.240Z"
+  scanned_at: "2026-10-25T18:13:35.244Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"

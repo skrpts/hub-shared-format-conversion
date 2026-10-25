@@ -1,5 +1,14 @@
 # Release Notes
 
+## v1.0.5
+GH#1100 migration wave (batch 6) — retire `default_from_previous` on the `source_content` slot.
+
+The slot is now declared **required** and read as `{{step.context.source_content}}`. It was already read that way; what changed is that the value must now be bound explicitly rather than falling back to whatever step happened to run before. `default_from_previous` was positional resolution wearing a declaration (K-045 Option A), and GH#1100 revoked it.
+
+**`target_format` is deliberately NOT made required.** It is a step-level configuration value supplied through `context:`, not upstream data flow, and it carried no `default_from_previous` to retire. Making it required would be a behaviour change for consumers that omit it, which is outside this wave.
+
+**Consumers pinned at 1.0.4 or below are unaffected** — they resolve this prompt from their pin, which still carries the default. The explicit `source_content` binding becomes required only when a consumer bumps to 1.0.5, which the consumer wave sequences separately. Five consumers invoke this prompt and none binds the slot today.
+
 ## v1.0.4
 GH#1011 — add the prompt this skill never had. 14 published steps across 8 packages declared the non-existent `local.transform` step type, which needs no prompt; the engine had no handler, so they fell through to the LLM default with nothing to send and the author saw the model complaining about a prompt nobody wrote. This skill now ships the prompt its consumers bind to.
 
